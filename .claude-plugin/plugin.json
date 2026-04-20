@@ -1,10 +1,9 @@
 {
   "name": "tsrun-toolkit",
   "description": "Dev workflow skills (fix-types, doc, clone-website) with Obsidian MCP integration.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": { "name": "Mathis Serrier" },
   "skills": "./skills/",
-  "agents": "./agents/",
   "userConfig": {
     "obsidian_port": {
       "title": "Obsidian Port",
