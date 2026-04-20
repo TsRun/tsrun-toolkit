@@ -1,7 +1,7 @@
 {
   "name": "tsrun-toolkit",
-  "description": "Dev workflow skills (commit, fix-types, doc, clone-website) with Obsidian MCP integration.",
-  "version": "1.7.1",
+  "description": "Dev workflow skills (fix-types, doc, clone-website) with Obsidian MCP integration.",
+  "version": "1.8.0",
   "author": { "name": "Mathis Serrier" },
   "skills": "./skills/",
   "userConfig": {
@@ -31,10 +31,10 @@
           },
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && git rev-parse --git-dir >/dev/null 2>&1 && [ -n \"$(git status --porcelain)\" ] && git add -A && git commit -m \"[UPDATE] auto-commit from Claude Code\" && git push || true",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && git rev-parse --git-dir >/dev/null 2>&1 && [ -n \"$(git status --porcelain)\" ] && git add -A && MSG=$(git diff --cached --stat | claude -p 'Write a one-line git commit message for these changes. Format: [TYPE] message. TYPE is one of: ADD, UPDATE, FIX, REMOVE. English only. No quotes. Just the message line, nothing else.' 2>/dev/null) && [ -n \"$MSG\" ] && git commit -m \"$MSG\" && git push || true",
             "shell": "bash",
             "async": true,
-            "timeout": 30
+            "timeout": 60
           }
         ]
       }
