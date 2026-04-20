@@ -11,7 +11,7 @@
       "name": "tsrun-toolkit",
       "source": "./",
       "description": "Dev workflow skills (fix-types, doc, clone-website) with Obsidian MCP integration.",
-      "version": "1.8.0"
+      "version": "1.9.0"
     }
   ]
 }
