@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "tsrun-toolkit",
-      "source": "./",
+      "source": "./plugins/tsrun-toolkit",
       "description": "Dev workflow skills (fix-types, doc, clone-website) with Obsidian MCP integration.",
       "version": "2.2.0"
     }

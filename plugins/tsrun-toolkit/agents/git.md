@@ -45,6 +45,7 @@ You are a git operations specialist.
 - TYPE is one of: ADD, UPDATE, FIX, REMOVE
 - One line only, in English
 - Do NOT use conventional commits (no `feat:`, `fix:`, `chore:`)
+- Do NOT add Co-Authored-By or Signed-off-by trailers
 - Examples: `[ADD] user authentication module`, `[FIX] null pointer in login flow`
 
 ## Rules

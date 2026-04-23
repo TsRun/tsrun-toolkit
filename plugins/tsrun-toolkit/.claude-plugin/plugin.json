@@ -24,7 +24,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell.exe -NoProfile -c \"(New-Object Media.SoundPlayer 'C:\\Windows\\Media\\chimes.wav').PlaySync()\"",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/sound.sh\"",
             "shell": "bash",
             "async": true,
             "timeout": 10
@@ -35,7 +35,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && git rev-parse --git-dir >/dev/null 2>&1 && [ -n \"$(git status --porcelain)\" ] && claude -p 'Commit all current changes and push. Analyze the diff to write a proper commit message.' --agent git --bare 2>/dev/null || true",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/autocommit.sh\"",
             "shell": "bash",
             "async": true,
             "timeout": 120
