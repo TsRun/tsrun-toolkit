@@ -1,23 +1,9 @@
 {
   "name": "tsrun-toolkit",
-  "description": "Dev workflow skills (fix-types, doc, clone-website) with Obsidian MCP integration.",
-  "version": "2.2.0",
+  "description": "Dev workflow skills (fix-types, doc, clone-website) with hooks and git agent.",
+  "version": "2.3.0",
   "author": { "name": "Mathis Serrier" },
   "skills": "./skills/",
-  "userConfig": {
-    "obsidian_port": {
-      "title": "Obsidian Port",
-      "description": "Obsidian REST API port (default: 27124)",
-      "type": "string",
-      "sensitive": false
-    },
-    "obsidian_api_key": {
-      "title": "Obsidian API Key",
-      "description": "Obsidian Local REST API key (from plugin settings)",
-      "type": "string",
-      "sensitive": false
-    }
-  },
   "hooks": {
     "Stop": [
       {
@@ -41,17 +27,18 @@
             "timeout": 120
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/cleanup-sessions.sh\"",
+            "shell": "bash",
+            "async": true,
+            "timeout": 30
+          }
+        ]
       }
     ]
-  },
-  "mcpServers": {
-    "obsidian": {
-      "command": "uvx",
-      "args": ["mcp-obsidian"],
-      "env": {
-        "OBSIDIAN_API_KEY": "${user_config.obsidian_api_key}",
-        "OBSIDIAN_PORT": "${user_config.obsidian_port}"
-      }
-    }
   }
 }
