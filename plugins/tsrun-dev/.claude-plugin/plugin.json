@@ -1,0 +1,7 @@
+{
+  "name": "tsrun-dev",
+  "description": "Code dev skills: /tsrun-dev:fix-types (resolve type-checker errors) and /tsrun-dev:doc (generate or update project documentation).",
+  "version": "1.0.0",
+  "author": { "name": "Mathis Serrier" },
+  "skills": "./skills/"
+}

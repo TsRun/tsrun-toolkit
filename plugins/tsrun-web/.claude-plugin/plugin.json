@@ -1,0 +1,7 @@
+{
+  "name": "tsrun-web",
+  "description": "Web cloning skill: /tsrun-web:clone-website reverse-engineers a site section-by-section and dispatches parallel builder agents (requires Playwright MCP).",
+  "version": "1.0.0",
+  "author": { "name": "Mathis Serrier" },
+  "skills": "./skills/"
+}

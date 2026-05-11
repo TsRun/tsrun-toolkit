@@ -4,14 +4,32 @@
     "name": "Mathis Serrier"
   },
   "metadata": {
-    "description": "TsRun toolkit: dev workflow skills and MCP integrations for Claude Code."
+    "description": "TsRun toolkit: dev workflow skills and MCP integrations for Claude Code, split into focused plugins."
   },
   "plugins": [
     {
-      "name": "tsrun-toolkit",
-      "source": "./plugins/tsrun-toolkit",
-      "description": "Dev workflow skills (fix-types, doc, clone-website, clean-sessions) with hooks and git agent.",
-      "version": "2.4.1"
+      "name": "tsrun-git",
+      "source": "./plugins/tsrun-git",
+      "description": "Git agent + autocommit Stop hook.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tsrun-dev",
+      "source": "./plugins/tsrun-dev",
+      "description": "Code dev skills: fix-types and doc.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tsrun-web",
+      "source": "./plugins/tsrun-web",
+      "description": "Website cloning skill with parallel builder agents (requires Playwright MCP).",
+      "version": "1.0.0"
+    },
+    {
+      "name": "tsrun-housekeeping",
+      "source": "./plugins/tsrun-housekeeping",
+      "description": "Session cleanup skill + Stop hooks (sound + autocommit-session pruning).",
+      "version": "1.0.0"
     }
   ]
 }

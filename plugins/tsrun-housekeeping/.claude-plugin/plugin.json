@@ -1,7 +1,7 @@
 {
-  "name": "tsrun-toolkit",
-  "description": "Dev workflow skills (fix-types, doc, clone-website, clean-sessions) with hooks and git agent.",
-  "version": "2.4.1",
+  "name": "tsrun-housekeeping",
+  "description": "Claude Code housekeeping: /tsrun-housekeeping:clean-sessions skill, plus Stop hooks that play a sound and prune autocommit-generated session transcripts.",
+  "version": "1.0.0",
   "author": { "name": "Mathis Serrier" },
   "skills": "./skills/",
   "hooks": {
@@ -14,17 +14,6 @@
             "shell": "bash",
             "async": true,
             "timeout": 10
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/autocommit.sh\"",
-            "shell": "bash",
-            "async": true,
-            "timeout": 120
           }
         ]
       },

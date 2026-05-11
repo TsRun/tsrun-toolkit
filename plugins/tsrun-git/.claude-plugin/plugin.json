@@ -1,0 +1,22 @@
+{
+  "name": "tsrun-git",
+  "description": "Git workflow: dedicated git agent and an autocommit Stop hook that commits + pushes dirty state via the agent.",
+  "version": "1.0.0",
+  "author": { "name": "Mathis Serrier" },
+  "agents": "./agents/",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PLUGIN_ROOT/hooks/autocommit.sh\"",
+            "shell": "bash",
+            "async": true,
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
